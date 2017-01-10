@@ -7,7 +7,7 @@
 <body>
 <h1>Error Handler</h1>
 <h2>URL:</h2>
-<div>${url}</div>
+<div>${url!}</div>
 <h2>message:</h2>
 <div>${exception.message!}</div>
 </body>
