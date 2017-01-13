@@ -1,0 +1,66 @@
+server:
+  port: 8080
+  display-name:
+spring:
+  application:
+    name:
+  datasource:
+    url: jdbc:mysql://10.168.16.116:3306/spring-boot?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: devApp2013
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+          max-active: 20
+          initial-size: 1
+          min-idle: 5
+          max-wait: 60000
+          time-between-eviction-runs-millis: 60000
+          min-evictable-idle-time-millis: 300000
+          test-while-idle: true
+          test-on-borrow: false
+          test-on-return: false
+    min-evictable-idle-time-millis: 300000
+    validation-query: SELECT 1 FROM DUAL
+    pool-prepared-statements: true
+    max-open-prepared-statements: 20
+    filters: stat,wall,log4j
+  jpa:
+    database: mysql
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+        packagesToScan: com.reapal
+  freemarker:
+    allow-request-override: false
+    allow-session-override: false
+    cache: true
+    charset: UTF-8
+    check-template-location: true
+    content-type: text/html
+    enabled: true
+    expose-request-attributes: false
+    expose-session-attributes: false
+    expose-spring-macro-helpers: true
+    prefer-file-system-access: true
+    suffix: .ftl
+    template-loader-path: classpath:/templates/
+    settings:
+      template_update_delay: 0
+      default_encoding: UTF-8
+      classic_compatible: true
+    order: 1
+  mail:
+    host: smtp.reapal.com
+    username: project@reapal.com
+    password: RONGbao123
+  resources:
+    static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/,file:${web.upload-path}
+
+debug: true
+
+logging:
+  level: debug

@@ -40,13 +40,13 @@ public class ApplicationTest {
      */
     @Test
     public void test() {
-        User u = new User();
+/*        User u = new User();
         u.setName("ccc");
         u.setPassword("ccc");
         u.setEmail("ccc@reapal.com");
         u.setCreateDateTime(new Date());
         u.setModifyDateTime(new Date());
-        userRepository.save(u);
+        userRepository.save(u);*/
 
     }
 
